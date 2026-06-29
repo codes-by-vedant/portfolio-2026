@@ -12,27 +12,27 @@ const CONTACT_METHODS: ContactMethod[] = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'goyalharsh642@gmail.com',
-    href: 'mailto:goyalharsh642@gmail.com',
+    value: 'Mail ID',
+    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=work.vedantghule@gmail.com',
   },
   {
     icon: MessageCircle,
     label: 'WhatsApp',
-    value: '+91 81682 94032',
+    value: 'Chat',
     // wa.me requires digits only — no +, no spaces, no hyphens
-    href: 'https://wa.me/918168294032',
+    href: 'https://wa.me/9823519107',
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: 'in/harsh-goyal-7900b2256',
-    href: 'https://www.linkedin.com/in/harsh-goyal-7900b2256/',
+    value: 'LinkedIn Profile',
+    href: 'https://www.linkedin.com/in/vedant-ghule-0196b7273/',
   },
   {
     icon: Github,
     label: 'GitHub',
-    value: '@harshgoyal27',
-    href: 'https://github.com/harshgoyal27',
+    value: 'GitHub',
+    href: 'https://github.com/codes-by-vedant',
   },
 ];
 
@@ -46,7 +46,7 @@ const ContactSection = () => {
       <FadeIn y={40}>
         <h2
           className="hero-heading text-center font-black uppercase tracking-tight leading-none mb-4"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
+          style={{ fontSize: 'clamp(3rem, 12vw, 120px)' }}
         >
           Get in touch
         </h2>
@@ -54,7 +54,7 @@ const ContactSection = () => {
 
       <FadeIn delay={0.15} y={20}>
         <p
-          className="text-center font-light uppercase tracking-widest text-[#D7E2EA]/60 mb-12 sm:mb-16 md:mb-20"
+          className="text-center font-light uppercase tracking-widest text-[#D7E2EA]/75 mb-12 sm:mb-16 md:mb-20"
           style={{ fontSize: 'clamp(0.85rem, 1.4vw, 1.1rem)' }}
         >
           Pick whichever channel suits you
@@ -84,7 +84,7 @@ const ContactSection = () => {
                     />
                   </div>
                   <ArrowUpRight
-                    className="text-[#D7E2EA]/40 transition-all duration-300 group-hover:text-[#D7E2EA] group-hover:rotate-12"
+                    className="text-[#D7E2EA]/60 transition-all duration-300 group-hover:text-[#D7E2EA] group-hover:rotate-12"
                     size={22}
                     strokeWidth={1.5}
                   />
@@ -92,13 +92,13 @@ const ContactSection = () => {
 
                 <div className="flex flex-col gap-2 sm:gap-3">
                   <span
-                    className="font-light uppercase tracking-widest text-[#D7E2EA]/50"
+                    className="font-light uppercase tracking-widest text-[#D7E2EA]/70"
                     style={{ fontSize: 'clamp(0.7rem, 1.1vw, 0.9rem)' }}
                   >
                     {method.label}
                   </span>
                   <span
-                    className="font-medium text-[#D7E2EA] break-all"
+                    className="font-medium text-[#D7E2EA]/95 break-all"
                     style={{ fontSize: 'clamp(1rem, 1.8vw, 1.4rem)' }}
                   >
                     {method.value}
@@ -112,18 +112,18 @@ const ContactSection = () => {
 
       {/* Footer line */}
       <FadeIn delay={0.4} y={20}>
-        <div className="mx-auto mt-20 sm:mt-24 md:mt-28 flex max-w-5xl flex-col items-center gap-3 border-t border-[#D7E2EA]/10 pt-8 text-center sm:flex-row sm:justify-between">
+        <div className="mx-auto mt-20 sm:mt-24 md:mt-28 flex max-w-5xl flex-col items-center gap-3 border-t border-[#D7E2EA]/40 pt-8 text-center sm:flex-row sm:justify-between">
           <span
-            className="font-light uppercase tracking-widest text-[#D7E2EA]/50"
+            className="font-light uppercase tracking-widest text-[#D7E2EA]/90"
             style={{ fontSize: 'clamp(0.7rem, 1.1vw, 0.9rem)' }}
           >
-            © 2026 Harsh Goyal
+            © 2026 Vedant Ghule
           </span>
           <span
-            className="font-light uppercase tracking-widest text-[#D7E2EA]/50"
+            className="font-light uppercase tracking-widest text-[#D7E2EA]/90"
             style={{ fontSize: 'clamp(0.7rem, 1.1vw, 0.9rem)' }}
           >
-            Designed & built in Delhi
+            Designed & built in Pune, Maharashtra
           </span>
         </div>
       </FadeIn>

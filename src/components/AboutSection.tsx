@@ -3,7 +3,7 @@ import ContactButton from './ContactButton';
 import AnimatedText from './AnimatedText';
 
 const ABOUT_TEXT =
-  "I'm a Computer Science graduate from NSUT, currently a Content R&D Trainee at PhysicsWallah, where I help ship live, customer-facing learning products. I focus on UI/UX, front-end development, and GenAI integration — turning rough ideas into clean, engaging digital experiences. Let's build something incredible together!";
+  "I am a B.Tech Computer Science & engineering student specializing in Cloud Computing at MIT Art, Design & Technology University, Pune.  I enjoy building practical & scalable software projects using AWS, GCP, Firebase, Flutter, React, Python, Java and Cloud Computing concepts. I like building responsive and user-friendly applications by applying UI/UX principles to create intuitive and engaging digital experiences.  I'm currently focoused on learning & implementing mordernized AI skills.";
 
 const AboutSection = () => {
   return (
@@ -20,9 +20,9 @@ const AboutSection = () => {
           className="pointer-events-none absolute top-[4%] left-[1%] sm:left-[2%] md:left-[4%] w-[60px] sm:w-[160px] md:w-[210px]"
       >
         <img
-          src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png"
-          alt=""
-          className="w-full h-auto"
+          src="/code.png"
+          alt="Artificial Intelligence"
+          className="w-full h-auto opacity-75"
           loading="lazy"
           draggable={false}
         />
@@ -36,9 +36,9 @@ const AboutSection = () => {
           className="pointer-events-none absolute bottom-[8%] left-[3%] sm:left-[6%] md:left-[10%] w-[55px] sm:w-[140px] md:w-[180px]"
       >
         <img
-          src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/p59_1.4659672e.png"
-          alt=""
-          className="w-full h-auto"
+          src="/ai.png"
+          alt="Artificial Intelligence"
+          className="w-full h-auto opacity-75"
           loading="lazy"
           draggable={false}
         />
@@ -99,34 +99,38 @@ const AboutSection = () => {
                       <div className="flex flex-col gap-5 sm:gap-6">
                         {[
                           {
-                            label: 'Languages',
-                            items: ['Python', 'JavaScript', 'HTML', 'CSS', 'SQL'],
+                            label: 'Programming Languages',
+                            items: ['Python','Java', 'C', 'C++' ,'Dart'],
                           },
                           {
-                            label: 'Frameworks & Libraries',
-                            items: ['React', 'Tailwind', 'Pandas', 'NumPy', 'Scikit-learn', 'NLTK'],
+                            label: 'Frontend & App Development',
+                            items: ['React', 'JavaScript', 'HTML', 'CSS', 'Flutter', 'UI/UX Design'],
                           },
                           {
-                            label: 'Tools & Platforms',
-                            items: ['Figma', 'Vercel', 'Git', 'GitHub', 'Power BI', 'Canva', 'Excel'],
+                            label: 'Cloud, Backend & Databases',
+                            items: ['Google Cloud', 'Firebase', 'AWS', 'Springboot', 'Node.js', 'MySQL', 'MongoDB','Supabase','Vercel'],
                           },
                           {
-                            label: 'AI & GenAI',
-                            items: ['Gemini', 'Claude', 'OpenAI', 'Prompt engineering'],
+                            label: 'AI / ML / Data',
+                            items: ['Gemini', 'Claude', 'OpenAI', 'Tensorflow','OpenCV','Pandas','NumPy'],
+                          },
+                          {
+                            label: 'Tools ',
+                            items: ['Git', 'GitHub', 'VSCode', 'Figma','Android Studio'],
                           },
                         ].map((group) => (
                           <div
                             key={group.label}
                             className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-5"
                           >
-                            <span className="text-xs uppercase tracking-widest text-[#D7E2EA]/40 sm:w-44 sm:shrink-0 sm:text-right">
+                            <span className="text-sm uppercase tracking-widest text-[#D7E2EA]/90 sm:w-44 sm:shrink-0 sm:text-right">
                               {group.label}
                             </span>
                             <div className="flex flex-wrap gap-2">
                               {group.items.map((item) => (
                                 <span
                                   key={item}
-                                  className="rounded-full border border-[#D7E2EA]/15 bg-[#D7E2EA]/[0.03] px-3 py-1 text-sm text-[#D7E2EA]/80 hover:border-[#D7E2EA]/40 hover:text-[#D7E2EA] transition-colors"
+                                  className="rounded-full border border-[#D7E2EA]/30 bg-[#D7E2EA]/[0.05] px-3 py-1 text-sm text-[#D7E2EA]/80 hover:border-[#D7E2EA]/40 hover:text-[#D7E2EA] transition-colors"
                                 >
                                   {item}
                                 </span>

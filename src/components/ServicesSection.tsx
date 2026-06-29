@@ -4,33 +4,33 @@ import FadeIn from './FadeIn';
 const SERVICES = [
   {
     number: '01',
-    title: 'UI/UX Design',
+    title: 'Full Stack Software Development',
     description:
-      'Designing clean, intuitive interfaces that prioritise user flow, hierarchy, and visual clarity — turning ideas into experiences people actually enjoy using.',
+      'Designing and developing scalable web and mobile applications with modern technologies. From responsive frontends to robust backend systems, I build end-to-end solutions focused on performance, usability, and maintainability.',
   },
   {
     number: '02',
-    title: 'Front-end Development',
+    title: 'Cloud Operations & Infastructure',
     description:
-      'Building responsive, performant web apps with React, TypeScript, and Tailwind — pixel-perfect on every screen, deployed seamlessly on Vercel.',
+      'Managing and optimizing cloud environments on AWS and GCP. Experienced with services such as IAM, EC2, S3, Cloud Storage, Compute Engine, and cloud security best practices, with a strong focus on reliability and cost optimization.',
   },
   {
     number: '03',
-    title: 'GenAI Integration',
+    title: 'UI/UX Design',
     description:
-      'Wiring large language models into real products via Gemini, Claude, and OpenAI APIs — from resume reviewers to AI tutors and beyond.',
+      'Creating intuitive, user-centered digital experiences with clean interfaces and thoughtful interactions. I transform ideas into visually appealing and functional products that enhance user engagement.',
   },
   {
     number: '04',
-    title: 'Prompt Engineering & LLM Automation',
+    title: 'AI Practitioner & Continuous Learner',
     description:
-      'Crafting reliable prompts and automation flows that turn LLMs into production-grade tools for content, analysis, and decision support.',
+      'Actively exploring AI technologies and their real-world applications in software products. I focus on understanding AI concepts, experimenting with integrations, and learning how intelligent systems can improve user experiences and business workflows.',
   },
   {
     number: '05',
-    title: 'Data Analysis & Visualization',
+    title: 'System Design, Automation & Optimization',
     description:
-      'Exploring datasets with Python (Pandas, NumPy, Seaborn) and Power BI — turning raw numbers into clear insights and dashboards stakeholders can act on.',
+      'Building well-structured software systems through thoughtful architecture design, efficient database management, and workflow automation. Focused on creating scalable, maintainable, and high-performing solutions.',
   },
 ];
 

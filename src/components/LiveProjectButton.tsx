@@ -5,7 +5,7 @@ interface LiveProjectButtonProps {
 }
 
 const LiveProjectButton = ({
-  label = 'Live Project',
+  label = 'GitHub Link',
   href = '#',
   className = '',
 }: LiveProjectButtonProps) => {

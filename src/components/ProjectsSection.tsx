@@ -7,153 +7,192 @@ interface ProjectData {
   number: string;
   category: string;
   name: string;
+  description: string;
   liveUrl: string;
-  col1Image1: string;
-  col1Image2: string;
-  col2Image: string;
+  techStack: string[];
+  highlights: string[];
 }
 
 const PROJECTS: ProjectData[] = [
-    {
-        number: '01',
-        category: 'Personal',
-        name: 'Forge',
-        liveUrl: 'https://forge-pink-seven.vercel.app/',
-        col1Image1: '/Forge.png',
-        col1Image2: '/Forge1.png',
-        col2Image: '/Forge2.png',
-      },
   {
-      number: '02',
-      category: 'Personal',
-      name: 'LawLab',
-      liveUrl: 'https://lawlab-self.vercel.app',
-      col1Image1: '/lawlab.png',
-      col1Image2: '/lawlab1.png',
-      col2Image: '/lawlab2.png',
-    },
-  {
-    number: '03',
-    category: 'Personal · GenAI',
-    name: 'ResumeIQ',
-    liveUrl: 'https://resumeiq-harsh.vercel.app/',
-    col1Image1: '/resumeiq-hero.png',
-    col1Image2: '/resumeiq-feedback.png',
-    col2Image: '/resumeiq-score.png',
+    number: '01',
+    category: 'Healthcare',
+    name: 'MediFind - Pharmacy Locator Platform',
+    description:
+      'A healthcare platform that helps users find medicines, check availability across pharmacies, and locate nearby medical stores through an intuitive and responsive interface.',
+    liveUrl: 'https://forge-pink-seven.vercel.app/',
+    techStack: ['React.js', 'React Native','Node.js', 'Firebase', 'Google Cloud' ,'Role Based Access Control', 'Row Level Access Control', 'API Integration','UI/UX Design'],
+    highlights: [
+      'Problem: Difficulty in locating medicines and managing pharmacy inventory efficiently',
+      'Solution: Developed a cloud-based system with RBAC for users, pharmacy owners, doctors and admins for end-to-end management',
+      'Built responsive web and mobile interfaces',
+      'Integrated Firebase authentication and cloud database',
+      'Added location-based service discovery using maps/location features'
+    ],
   },
+  {
+    number: '02',
+    category: 'Automation',
+    name: 'NearNest - Bridging the gap between local shops and the digital world.',
+    description:
+      'Nearnest is a web platform that empowers local businesses to build an online presence, showcase their products and services, manage customer inquiries, and connect with nearby customers through search and location-based discovery.',
+    liveUrl: 'https://lawlab-self.vercel.app',
+    techStack: ['Flask', 'SQLite3', 'Python', 'HTML', 'CSS', 'RBAC', 'Google maps API'],
+    highlights: [
+      'Problem: Users struggle with finding nearby shops and relevant local services easily',
+      'Solution: Digitalize local shops and bring them online for better accessibility',
+      'Implemented Role Based Access Control System to Authenticate & Authorize users.',
+      'Built user-friendly, scalable and easy to use UI through which users can interact with the platfrom.',
+      'Created a better Database Schema & Design to store and fetch user data with minial latency and with high accuracy.',
+      'Integrated In-app Google Maps for ease of use.'
+    ],
+  },
+
+   {
+    number: '03',
+    category: 'Education',
+    name: ' University Based Quiz Web Application',
+    description:
+      'University Quiz Platfrom is an interactive assessment platform designed to modernize the evaluation process within the university. It enables educators to conduct quizzes efficiently, monitor student performance, and gain insights into learning progress. By providing a structured and engaging assessment experience, the platform supports continuous learning, timely feedback, and data-driven academic improvement.',
+    liveUrl: 'https://lawlab-self.vercel.app',
+    techStack: [ 'Python', 'Django', 'HTML', 'CSS', 'SQLite', 'RBAC'],
+    highlights: [
+      'Problem: Traditional assessment methods lacked efficiency and tracking capability',
+      'Solution: Developed a web-based quiz system for conducting and managing exams online',
+      'Designed a responsive, scalable & user friendly UI to interact with the platfrom.',
+      'Implemented tight authentication & authorization protocols to keep the user accounts safe from unauthorized access.',
+      'Implemented Graphical report system to track the students progess and display it in graphical manner.',
+    ],
+  },
+
   {
     number: '04',
-    category: 'Personal · Design',
-    name: 'Notch',
-    liveUrl: 'https://notch-zeta.vercel.app/',
-    col1Image1: '/notch-hero.png',
-    col1Image2: '/notch-pricing.png',
-    col2Image: '/notch-mockup.png',
+    category: 'Healthcare',
+    name: ' An Approach for Detection and Classification of Brain Tumor Using CNN and VGG – 16 Modules.',
+    description:
+      'Brain Tumor Detection & Classification System is an ML based medical imaging platform designed to assist in the early detection and analysis of brain tumors from MRI scans. The system analyzes uploaded brain MRI images to identify the presence of tumors, classify their type, and assess their severity. By leveraging advanced deep learning techniques, the platform supports faster and more accurate diagnostic insights, helping improve clinical decision-making and patient care.',
+    liveUrl: 'https://lawlab-self.vercel.app',
+    techStack: [ 'Python', 'TensorFlow', 'CNN', 'VGG-16'],
+    highlights: [
+      'Integrated ML-based models for image classification & image learning.',
+      'Trained the model using TensorFlow and large datasets.',
+      'Focused on detection, classification & the severity calculation of the brain tumors only.',
+      'Tested the accuracy & efficiency of the model using real world data'
+    ],
   },
 ];
+
 
 interface ProjectCardProps {
   project: ProjectData;
   index: number;
   total: number;
-  containerRef: React.RefObject<HTMLDivElement>;
 }
 
-const ProjectCard = ({ project, index, total, containerRef }: ProjectCardProps) => {
+const ProjectCard = ({ project, index, total }: ProjectCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
-  // Scroll progress for THIS card relative to the whole projects scroll range.
   const { scrollYProgress } = useScroll({
     target: cardRef,
     offset: ['start end', 'start start'],
   });
 
-  // Cards further down the stack stay full-size; earlier cards scale DOWN
-  // as later cards stack on top of them.
-  const targetScale = 1 - (total - 1 - index) * 0.03;
-  const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.97 - index * 0.005]);
 
   return (
     <div
       ref={cardRef}
-      className="sticky top-24 md:top-32 h-[85vh] w-full"
-      style={{ top: `${96 + index * 28}px` }}
+      className="sticky top-16 sm:top-24 md:top-28 min-h-[480px] h-[88vh] sm:h-[78vh] md:h-[82vh] w-full mb-4 sm:mb-0"
     >
       <motion.article
         style={{ scale }}
-        className="origin-top mx-auto h-full w-full flex flex-col gap-4 sm:gap-6 md:gap-8 rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:p-6 md:p-8"
+        className="origin-top mx-auto h-full w-full flex flex-col gap-2.5 sm:gap-4 md:gap-5 rounded-[24px] sm:rounded-[32px] md:rounded-[38px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-3.5 sm:p-5 md:p-6 overflow-y-auto"
       >
-          {/* Top row: number + meta + button */}
-                  <div className="flex flex-col sm:flex-row items-start sm:justify-between gap-4 sm:gap-6">
-                    <div className="flex flex-row items-start gap-3 sm:gap-6 md:gap-10 min-w-0 w-full">
-                      <div
-                        className="shrink-0 font-black text-[#D7E2EA] leading-none"
-                        style={{ fontSize: 'clamp(2.5rem, 10vw, 140px)' }}
-                      >
-                        {project.number}
-                      </div>
-
-                      <div className="flex flex-col gap-1 sm:gap-3 pt-1 sm:pt-3 md:pt-4 min-w-0 flex-1">
-                        <span
-                          className="font-light uppercase tracking-widest text-[#D7E2EA]/60"
-                          style={{ fontSize: 'clamp(0.65rem, 1.2vw, 1rem)' }}
-                        >
-                          {project.category}
-                        </span>
-                        <h3
-                          className="font-medium uppercase text-[#D7E2EA] leading-tight"
-                          style={{ fontSize: 'clamp(1.1rem, 2.2vw, 2.1rem)' }}
-                        >
-                          {project.name}
-                        </h3>
-                      </div>
-                    </div>
-
-                    <div className="shrink-0 self-start sm:self-auto pt-1 sm:pt-2 md:pt-3 w-full sm:w-auto">
-                      <LiveProjectButton href={project.liveUrl} className="w-full sm:w-auto" />
-                    </div>
-                  </div>
-
-        {/* Bottom row: two-column image grid */}
-        <div className="grid grid-cols-[40%_60%] gap-3 sm:gap-4 md:gap-5 flex-1 min-h-0">
-          {/* Left column - 2 stacked */}
-          <div className="flex flex-col gap-3 sm:gap-4 md:gap-5 min-h-0">
+        {/* TOP SECTION */}
+        <div className="flex flex-col sm:flex-row items-start sm:justify-between gap-3 sm:gap-4">
+          <div className="flex flex-row items-start gap-3 sm:gap-5 md:gap-7 min-w-0 w-full">
             <div
-              className="overflow-hidden rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-              style={{ height: 'clamp(130px, 16vw, 230px)' }}
+              className="shrink-0 font-black text-[#D7E2EA] leading-none"
+              style={{ fontSize: 'clamp(1.75rem, 8vw, 110px)' }}
             >
-              <img
-                src={project.col1Image1}
-                alt={`${project.name} preview 1`}
-                className="h-full w-full object-cover"
-                loading="lazy"
-                draggable={false}
-              />
+              {project.number}
             </div>
-            <div
-              className="overflow-hidden rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-              style={{ height: 'clamp(160px, 22vw, 340px)' }}
-            >
-              <img
-                src={project.col1Image2}
-                alt={`${project.name} preview 2`}
-                className="h-full w-full object-cover"
-                loading="lazy"
-                draggable={false}
-              />
+
+            <div className="flex flex-col gap-1 sm:gap-2 pt-1 sm:pt-2 min-w-0 flex-1">
+              <span
+                className="font-light uppercase tracking-widest text-[#D7E2EA]/60"
+                style={{ fontSize: 'clamp(0.7rem, 2.2vw, 1.1rem)' }}
+              >
+                {project.category}
+              </span>
+
+              <h3
+                className="font-medium uppercase text-[#D7E2EA] leading-tight break-words"
+                style={{ fontSize: 'clamp(1.1rem, 3.2vw, 1.6rem)' }}
+              >
+                {project.name}
+              </h3>
             </div>
           </div>
 
-          {/* Right column - 1 tall */}
-          <div className="overflow-hidden rounded-[40px] sm:rounded-[50px] md:rounded-[60px] min-h-0">
-            <img
-              src={project.col2Image}
-              alt={`${project.name} preview 3`}
-              className="h-full w-full object-cover"
-              loading="lazy"
-              draggable={false}
-            />
+          <div className="shrink-0 w-full sm:w-auto">
+            <LiveProjectButton href={project.liveUrl} className="w-full sm:w-auto" />
           </div>
+        </div>
+
+        {/* DESCRIPTION */}
+        <div className="max-w-4xl px-0.5 sm:px-2">
+          <p
+            className="text-[#D7E2EA]/85 leading-relaxed"
+            style={{ fontSize: 'clamp(0.8rem, 1.8vw, 1.15rem)' }}
+          >
+            {project.description}
+          </p>
+        </div>
+
+        {/* TECH STACK */}
+        <div className="max-w-4xl px-0.5 sm:px-2">
+          <h4
+            className="text-[#D7E2EA]/90 uppercase tracking-widest mb-2 font-semibold"
+            style={{ fontSize: 'clamp(0.7rem, 1.6vw, 1.1rem)' }}
+          >
+            Tech Stack
+          </h4>
+
+          <div className="flex flex-wrap gap-1.5 sm:gap-2">
+            {project.techStack.map((tech) => (
+              <span
+                key={tech}
+                className="px-2.5 sm:px-3 py-1 rounded-full border border-[#3B82F6]/40 text-[#D7E2EA] bg-[#0C0C0C]/40 hover:shadow-[0_0_10px_#3B82F6] transition-all whitespace-nowrap"
+                style={{ fontSize: 'clamp(0.6rem, 1.4vw, 0.85rem)' }}
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* HIGHLIGHTS (FULLY PRESERVED) */}
+        <div className="max-w-4xl px-0.5 sm:px-2">
+          <h4
+            className="text-[#D7E2EA]/85 uppercase tracking-widest mb-2"
+            style={{ fontSize: 'clamp(0.7rem, 1.6vw, 1.1rem)' }}
+          >
+            Project Highlights
+          </h4>
+
+          <ul className="space-y-1">
+            {project.highlights.map((item, i) => (
+              <li
+                key={i}
+                className="text-[#D7E2EA]/80 leading-snug flex gap-2"
+                style={{ fontSize: 'clamp(0.68rem, 1.5vw, 1rem)' }}
+              >
+                <span>•</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </motion.article>
     </div>
@@ -161,30 +200,27 @@ const ProjectCard = ({ project, index, total, containerRef }: ProjectCardProps) 
 };
 
 const ProjectsSection = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
   return (
     <section
       id="projects"
-      className="relative z-10 -mt-10 sm:-mt-12 md:-mt-14 w-full rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] bg-[#0C0C0C] px-4 sm:px-6 md:px-10 pt-20 sm:pt-24 md:pt-32 pb-24"
+      className="relative z-10 bg-[#0C0C0C] px-3 sm:px-6 md:px-10 pt-12 sm:pt-16 md:pt-20 pb-16 sm:pb-20 md:pb-24"
     >
       <FadeIn y={40}>
         <h2
-          className="hero-heading text-center font-black uppercase tracking-tight leading-none mb-16 sm:mb-20 md:mb-28"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
+          className="text-center font-black uppercase text-[#D7E2EA] mb-10 sm:mb-12 md:mb-16"
+          style={{ fontSize: 'clamp(2.2rem, 10vw, 140px)' }}
         >
-          Project
+          Projects
         </h2>
       </FadeIn>
 
-      <div ref={containerRef} className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl">
         {PROJECTS.map((project, i) => (
           <ProjectCard
             key={project.number}
             project={project}
             index={i}
             total={PROJECTS.length}
-            containerRef={containerRef}
           />
         ))}
       </div>
