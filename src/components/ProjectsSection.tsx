@@ -20,7 +20,7 @@ const PROJECTS: ProjectData[] = [
     name: 'MediFind - Pharmacy Locator Platform',
     description:
       'A healthcare platform that helps users find medicines, check availability across pharmacies, and locate nearby medical stores through an intuitive and responsive interface.',
-    liveUrl: 'https://forge-pink-seven.vercel.app/',
+    liveUrl: 'https://github.com/codes-by-vedant/nearnest-platform.git',
     techStack: ['React.js', 'React Native','Node.js', 'Firebase', 'Google Cloud' ,'Role Based Access Control', 'Row Level Access Control', 'API Integration','UI/UX Design'],
     highlights: [
       'Problem: Difficulty in locating medicines and managing pharmacy inventory efficiently',
@@ -36,7 +36,7 @@ const PROJECTS: ProjectData[] = [
     name: 'NearNest - Bridging the gap between local shops and the digital world.',
     description:
       'Nearnest is a web platform that empowers local businesses to build an online presence, showcase their products and services, manage customer inquiries, and connect with nearby customers through search and location-based discovery.',
-    liveUrl: 'https://lawlab-self.vercel.app',
+    liveUrl: 'https://github.com/codes-by-vedant/Nearest-Empowering-local-shops.git',
     techStack: ['Flask', 'SQLite3', 'Python', 'HTML', 'CSS', 'RBAC', 'Google maps API'],
     highlights: [
       'Problem: Users struggle with finding nearby shops and relevant local services easily',
@@ -54,7 +54,7 @@ const PROJECTS: ProjectData[] = [
     name: ' University Based Quiz Web Application',
     description:
       'University Quiz Platfrom is an interactive assessment platform designed to modernize the evaluation process within the university. It enables educators to conduct quizzes efficiently, monitor student performance, and gain insights into learning progress. By providing a structured and engaging assessment experience, the platform supports continuous learning, timely feedback, and data-driven academic improvement.',
-    liveUrl: 'https://lawlab-self.vercel.app',
+    liveUrl: 'https://github.com/codes-by-vedant/UniversityBasedQuizPlatform.git',
     techStack: [ 'Python', 'Django', 'HTML', 'CSS', 'SQLite', 'RBAC'],
     highlights: [
       'Problem: Traditional assessment methods lacked efficiency and tracking capability',
@@ -71,7 +71,7 @@ const PROJECTS: ProjectData[] = [
     name: ' An Approach for Detection and Classification of Brain Tumor Using CNN and VGG – 16 Modules.',
     description:
       'Brain Tumor Detection & Classification System is an ML based medical imaging platform designed to assist in the early detection and analysis of brain tumors from MRI scans. The system analyzes uploaded brain MRI images to identify the presence of tumors, classify their type, and assess their severity. By leveraging advanced deep learning techniques, the platform supports faster and more accurate diagnostic insights, helping improve clinical decision-making and patient care.',
-    liveUrl: 'https://lawlab-self.vercel.app',
+    liveUrl: 'https://github.com/riteshbhosale2071/BrainTumorDetectionProject.git',
     techStack: [ 'Python', 'TensorFlow', 'CNN', 'VGG-16'],
     highlights: [
       'Integrated ML-based models for image classification & image learning.',
