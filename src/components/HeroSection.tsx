@@ -216,7 +216,7 @@ const HeroSection = () => {
 
             <FadeIn delay={0.85} y={20}>
               <p className="mt-5 md:mt-7 text-xl md:text-2l font-medium uppercase tracking-[0.3em] text-white/75">
-                Software Developer · UI/UX Designer · AWS/GCP Cloud Operations · AI Integration
+                AWS/GCP Cloud Operations · Software Engineer · UI/UX Designer · AI Integration
               </p>
             </FadeIn>
 

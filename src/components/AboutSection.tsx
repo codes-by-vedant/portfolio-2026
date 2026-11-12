@@ -12,53 +12,6 @@ const AboutSection = () => {
       className="relative flex min-h-screen w-full items-center justify-center overflow-hidden px-5 sm:px-8 md:px-10 py-20"
     >
       {/* Corner decorative 3D images */}
-      <FadeIn
-        delay={0.1}
-        x={-80}
-        y={0}
-        duration={0.9}
-          className="pointer-events-none absolute top-[4%] left-[1%] sm:left-[2%] md:left-[4%] w-[60px] sm:w-[160px] md:w-[210px]"
-      >
-        <img
-          src="/code.png"
-          alt="Artificial Intelligence"
-          className="w-full h-auto opacity-75"
-          loading="lazy"
-          draggable={false}
-        />
-      </FadeIn>
-
-      <FadeIn
-        delay={0.25}
-        x={-80}
-        y={0}
-        duration={0.9}
-          className="pointer-events-none absolute bottom-[8%] left-[3%] sm:left-[6%] md:left-[10%] w-[55px] sm:w-[140px] md:w-[180px]"
-      >
-        <img
-          src="/ai.png"
-          alt="Artificial Intelligence"
-          className="w-full h-auto opacity-75"
-          loading="lazy"
-          draggable={false}
-        />
-      </FadeIn>
-
-      <FadeIn
-        delay={0.15}
-        x={80}
-        y={0}
-        duration={0.9}
-          className="pointer-events-none absolute top-[4%] right-[1%] sm:right-[2%] md:right-[4%] w-[60px] sm:w-[160px] md:w-[210px]"
-      >
-        <img
-          src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/lego_icon-1.703bb594.png"
-          alt=""
-          className="w-full h-auto"
-          loading="lazy"
-          draggable={false}
-        />
-      </FadeIn>
 
       <FadeIn
         delay={0.3}

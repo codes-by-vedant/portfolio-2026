@@ -112,21 +112,43 @@ const ContactSection = () => {
 
       {/* Footer line */}
       <FadeIn delay={0.4} y={20}>
-        <div className="mx-auto mt-20 sm:mt-24 md:mt-28 flex max-w-5xl flex-col items-center gap-3 border-t border-[#D7E2EA]/40 pt-8 text-center sm:flex-row sm:justify-between">
-          <span
-            className="font-light uppercase tracking-widest text-[#D7E2EA]/90"
-            style={{ fontSize: 'clamp(0.7rem, 1.1vw, 0.9rem)' }}
-          >
-            © 2026 Vedant Ghule
-          </span>
-          <span
-            className="font-light uppercase tracking-widest text-[#D7E2EA]/90"
-            style={{ fontSize: 'clamp(0.7rem, 1.1vw, 0.9rem)' }}
-          >
-            Designed & built in Pune, Maharashtra
-          </span>
-        </div>
-      </FadeIn>
+  <div className="mx-auto mt-20 sm:mt-24 md:mt-28 flex max-w-5xl flex-col gap-10 border-t border-[#D7E2EA]/40 pt-8 sm:flex-row sm:justify-between">
+
+    {/* Left Block */}
+    <div className="flex flex-col items-center sm:items-start gap-3">
+      <span
+        className="font-light uppercase tracking-widest text-[#D7E2EA]/90"
+        style={{ fontSize: 'clamp(0.7rem, 1.1vw, 0.9rem)' }}
+      >
+        © 2026 Vedant Ghule
+      </span>
+
+      <img
+        src="/cloudflare.png"
+        alt="Cloudflare"
+        className="h-20 w-auto"
+      />
+    </div>
+
+    {/* Right Block */}
+    <div className="flex flex-col items-center sm:items-end gap-3">
+      <span
+        className="font-light uppercase tracking-widest text-[#D7E2EA]/90"
+        style={{ fontSize: 'clamp(0.7rem, 1.1vw, 0.9rem)' }}
+      >
+        Designed & Built in Pune, Maharashtra
+      </span>
+
+      <span
+        className="font-light uppercase tracking-widest text-[#D7E2EA]/70"
+        style={{ fontSize: 'clamp(0.65rem, 1vw, 0.85rem)' }}
+      >
+        Deployed on Cloudflare Pages
+      </span>
+    </div>
+
+  </div>
+</FadeIn>
     </section>
   );
 };
